@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    height: auto; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, sans-serif;
+}
+
+header nav {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background: linear-gradient(to right, white, white, #DCDCDC, #DCDCDC, #DCDCDC);
+    justify-content: space-between;
+    top: 0;
+}
+
+header nav .logo {
+    display: flex;
+}
+
+header nav .logo figcaption {
+    margin: auto;
+    font-size: 13px;
+}
+
+header nav .logo figcaption span {
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 0px;
+}
+
+header nav .logo img{
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 22px;
+    color: rgb(0, 0, 73);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+header nav ul li a:hover {
+    background-color: whitesmoke;
+    border-radius: 100px;
+}
+
+header nav ul li a:active {
+    background-color: rgb(105, 105, 105);
+    color: white;
+    font-size: 24px;
+    transition: 0.1s;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    margin: auto 0;
+    margin-right: 20px;
+    display: none;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 14px;
+    background-color: aquamarine;
+    z-index: 10;
+    opacity: 0;
+}
+
+.menu-toggle div {
+    height: 3px;
+    width: 28px;
+    background-color: whitesmoke;
+}
+
+.menu-toggle input:checked ~div:nth-child(2) {
+    transform: rotate(45deg) translate(4px, 8px);
+    transition: 0.2s;
+}
+
+.menu-toggle input:checked ~div:nth-child(3) {
+    opacity: 0;
+}
+
+.menu-toggle input:checked ~div:nth-child(4) {
+    transform: rotate(-45deg) translate(4px, -8px);
+    transition: 0.2s;
+}
+
+main {
+    display: flex;
+    margin-top: 70px;
+    padding: 20px;
+    gap: 20px;
+}
+
+main article {
+    width: 55%;
+}
+
+main article p {
+    font-size: 20px;
+}
+
+main article a {
+    background-color: #DCDCDC;
+    color: rgb(0, 0, 73);
+    border-radius: 100px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 22px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+main article a:hover {
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
+main article a:active {
+    background-color: rgb(105, 105, 105);
+    color: white;
+    font-size: 25px;
+    transition: 0.1s;
+}
+
+main aside {
+    display: flex;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main aside img {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 7px 7px 15px 2px rgb(150, 150, 150);
+}
+
+.contact {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #DCDCDC;
+    border-radius: 20px;
+    box-shadow: 7px 7px 15px 2px rgb(150, 150, 150);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact img {
+    width: 120px;
+    margin-top: 0px;
+}
+
+.contact figcaption, .contact p {
+    font-size: 20px;
+}
+
+.contact figcaption {
+    margin-top: 20px;
+}
+
+.contact p {
+    margin-top: 0px;
+}
+
+.contact p i {
+    background-color: whitesmoke;
+    padding: 3px;
+    border-radius: 100px;
+}
+
+footer {
+    margin-top: 80px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    background: linear-gradient(to left, white, white, #DCDCDC, #DCDCDC, #DCDCDC);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer p i {
+    font-size: 20px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+footer p a:hover i {
+    font-size: 25px;
+}
+
+footer p a:active i {
+    background-color: rgb(105, 105, 105);
+    color: white;
+    transition: 0.1s;
+}
+
+
+@media only screen and (max-width:950px) {
+    main {
+        display: block;
+    }
+
+    main aside img {
+        margin-top: 50px;
+    }
+
+    main aside, main article {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    header nav ul {
+        height: fit-content;
+        flex-direction: column;
+        margin-top: 55px;
+        padding-bottom: 20px;
+        gap: 30px;
+        background-color: #DCDCDC;
+        border-radius: 5px;
+        position: absolute;
+        right: -200px;
+        transition: 0.5s;
+    }
+
+    .slide-change {
+        right: 0;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    main aside img {
+        width: 300px;
+    }
+
+    main aside, main article {
+        width: 100%;
+    }
+}

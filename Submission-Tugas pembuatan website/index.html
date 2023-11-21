@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image/logoA.jpg" alt="Logo">
+                <figcaption><span>Ahmad</span><br>Digital Academy</figcaption>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Mengungkap Kreativitas dalam Akuntansi: Strategi Baru untuk Mengoptimalkan Keuangan Bisnis Anda</h1>
+            <p>Kami menyediakan layanan pelatihan dan konsultasi akuntansi yang disesuaikan untuk memenuhi kebutuhan unik bisnis Anda. Dengan tim konsultan akuntan berpengalaman kami, kami tidak hanya memberikan pelatihan mendalam tentang prinsip-prinsip akuntansi terkini tetapi juga memberikan panduan konsultatif yang mendalam untuk membimbing Anda melalui kompleksitas keuangan bisnis Anda. Dari pelatihan praktis hingga solusi konsultatif yang spesifik, kami menyajikan pengetahuan terkini dan strategi terbaik dalam dunia akuntansi untuk membantu Anda mengelola keuangan perusahaan Anda dengan efisien dan percaya diri. Dengan bantuan kami, Anda dapat mengoptimalkan operasi keuangan bisnis Anda dan mencapai tujuan keuangan Anda dengan lebih mudah. Segera hubungi kami untuk memulai perjalanan Anda menuju keuangan bisnis yang lebih baik dan lebih stabil.</p>
+            <a href="#">Lebih Lanjut</a>
+        </article>
+        <aside>
+            <img src="image/gambarsamping.jpg" alt="">
+            <div class="contact">
+                <h2>Owner</h2>
+                <img src="image/pasfoto.jpeg" alt="Pas Foto">
+                <figcaption>Ahmad Khalifa, S.Akun.</figcaption>
+                <p><i class="far fa-envelope"></i>  ahmad.laa007@gmail.com</p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <h1>Awesome Feature</h1>
+            <p><a href="#"><i class="far fa-clone"></i></a></p>
+            <p><a href="#"><i class="fas fa-project-diagram"></i></a></p>
+            <p><a href="#"><i class="far fa-lightbulb"></i></a></p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('header nav ul');
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('slide-change');
+        })
+    </script>
+</body>
+</html>
